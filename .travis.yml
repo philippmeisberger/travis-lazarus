@@ -3,7 +3,7 @@
 
 language: generic
 sudo: required
-dist: trusty
+dist: xenial
 
 os:
   - linux
@@ -49,3 +49,11 @@ notifications:
   email:
     on_success: false
     on_failure: change
+deploy:
+  provider: releases
+  file: bin/my_lazarus_tests
+  skip_cleanup: true
+  on:
+    tags: true
+  api_key:
+    secure: "EsKyIv31ZIMuUulVw90N+P4Ljap3XuXc1nMbjIMEycy2Zmf6J70by2HjTFjUIoEZi646r4/DBnQUH5i/CrOWcZV2pjDFCK3Dx6AQ3np+qzpaq59Z9OoWS1DV5cd9znW0m0mVXC3gSUttO+tcQXiIMepdrjCs4yKsVuxSIgIZTidq5WOYaOkeq0voS+FNb+0UJb3rHAf3FFLBifpgI/3/qBHCaBSwP/FDZbZaK1oB8Ew7sGnslJSpppMKIkldxtngwrlGGaXlMHkFG9AO5R4weA2IqgkEmh+gASktgrKMSuPhOiDY3FkBGhp3pknXV+3aGrQnEj2x+lcov0JQSQ3NJ68sr3cEuqsVHi7YAFyI8CbnvQhmQd2AiqclztZ5i0JUKYL8oA/EkQpsnFIKwfRhTVd+6dypZNgDi4WhjPEkJYVru86C7VHJ5T9yzLeG7ZyG09Zjy3k1Q5lvjXCkWD7g1s3Uq5VGZUARh4RrOnMgxqdhK5JXUh2yPxkcX6bmrNOHY2XkIm/BYNk1GiSbcAad3BE6zp/u87/PFQcXimpv92Y0nsMq66CNMz0fmUYqBVdWYpAWc1WF/UDRzWr19KHgZaYyENALGUAI2dJw9dZkSSwLQDRQK8CFbhsdcEIGEQTpUCRh1Tpm7lKsGh/xyCVIJ5jqVxl7UBE+ldDmWro9MzU="
